@@ -223,19 +223,6 @@ class portfolio_banner_widget extends \Elementor\Widget_Base {
 		$contact_subtitle = $settings['contact_subtitle'];
 		$contact_des = $settings['contact_des'];
 		?>
-		
-		<?php 
-			// cv button 
-			function CvButton() {
-				global $redux_demo;
-				?>
-					<a href="<?php echo $redux_demo['cv_file']['url'];?>" class="main-btn">
-						<span class="btn-text"><?php echo $redux_demo['cv_btn_title']?></span>
-						<span class="btn-icon"><i class="fas fa-download"></i></span>
-					</a>
-				<?php
-			}
-		?>
 
 		<div class="bashar-portfolio">
 			<header class="container header active" id="home">
@@ -255,7 +242,10 @@ class portfolio_banner_widget extends \Elementor\Widget_Base {
 						?>
 			
 						<div class="btn-con">
-							<?php CvButton();?>
+							<a href="<?php echo $redux_demo['cv_file']['url'];?>" class="main-btn">
+        						<span class="btn-text"><?php echo $redux_demo['cv_btn_title']?></span>
+        						<span class="btn-icon"><i class="fas fa-download"></i></span>
+        					</a>
 						</div>
 					</div>
 				</div>
@@ -278,7 +268,10 @@ class portfolio_banner_widget extends \Elementor\Widget_Base {
 								echo $about_des ? '<p>' . $about_des . '</p>' : '';
 							?>
 							<div class="btn-con">
-								<?php CvButton();?>
+								<a href="<?php echo $redux_demo['cv_file']['url'];?>" class="main-btn">
+            						<span class="btn-text"><?php echo $redux_demo['cv_btn_title']?></span>
+            						<span class="btn-icon"><i class="fas fa-download"></i></span>
+            					</a>
 							</div>
 						</div>
 						<div class="right-about">
